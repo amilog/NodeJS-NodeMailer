@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
-
-// Öncelikle mail konfigürasyonunu yazıyorum
+// :)
 const transporter = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
@@ -8,8 +7,8 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         type: 'login',
-        user: "haqqinnyolu@gmail.com",
-        pass: "dkdsnabieekwljda",
+        user: process.env.mail,
+        pass: process.env.key,
     },
 });
 
